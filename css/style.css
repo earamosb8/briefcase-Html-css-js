@@ -1,0 +1,572 @@
+/*reglas
+selectores
+declaraciones
+propiedades
+valores*/
+/* selector de etiqueta header-section*/
+/* selector descendente 
+body header div nav ol li a{
+}*/
+
+/* selector de clase . puedes aplicar un clase a muchas etiquetas html,pero si vas aplicar un id debe ser unico para un solo elemento html*/
+/*selectores de id # deben ser unicos para un solo elemento html*/
+body{
+   font-family: 'Source Sans Pro', sans-serif;
+   margin:0;
+   background-color: #BAE4FA;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?bqb2fe');
+  src:  url('../fonts/icomoon.eot?bqb2fe#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?bqb2fe') format('truetype'),
+    url('../fonts/icomoon.woff?bqb2fe') format('woff'),
+    url('../fonts/icomoon.svg?bqb2fe#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+ 
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-menu:before {
+  content: "\e900";
+}
+.header ul {
+    display: flex;
+    height: inherit;
+  }
+  .header ul li { /* .header ol li hereda de .header ol */
+    height: inherit;
+  }
+  .menu { /* .menu hereda de .header */
+    height: inherit;
+  }
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+figure{
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+   
+}
+
+h1{
+    font-size: 40px;
+    line-height: 1.5;
+    letter-spacing: -.2px;
+    color: white;
+    text-transform: uppercase;/*colocar mayusculas desde html es mala practica*/
+    margin: 0;
+     /*top right bottom left*/
+}
+h1 strong{
+    color: #026fff;
+
+}
+h2{
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family:  'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+  background-color:#251F46;
+}
+.hero{
+    height: 300px;
+    /*background-image: url(../images/hero.jpg);*/
+    /*background-size: 500px 300px;
+    background-repeat: no-repeat;
+    background-position-x: right;*/
+    background-color:#251F46/*#1b2127;*/;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.hero-image{
+  object-fit: cover;
+}
+.portfolio{
+    background-color:/* #fafafa;*/#085DB0;
+    padding: 20px;
+}
+.project{
+   /* border-top: 10px solid red;
+    border-right: 10px solid green;
+    border-left: 10px solid orange;
+    border-bottom: 10px solid pink;
+    si no le coloco color al borde el hereda el color del contenido*/
+  /* border-top-color:red;
+    border-width: 15px;
+    border-style:solid;*/
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin:10px;
+    margin-bottom: 15px;
+   /* margin-right:0 ;
+    margin-left: ;
+    margin-top: ;*/
+    padding: 20px;
+    background: white;
+    display: flex;/*pord defecto coloca los elementos hijos en una columna
+    box-sizing: border-box;/*la caja siempre va a teener el mismo tamaño sin importar si le pongo borde*/
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+.project-title{
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+
+}
+.project-details{
+    width: 50%;
+   
+}
+
+.project-imageContainer{
+    width: 50%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-imageContainer img {
+  max-width: 100%;/* 100% de su elemento padre, si el elemento padre no puede darle espacio para su 
+  tamaño original , el tomara su  100%*/
+
+}
+.project-course{
+  margin: 10px 0;
+}
+.project-date, .project-url{
+  margin: 10px 0;
+}
+.project-description{
+  font-size: 20px;
+}
+.project strong{
+  font-family: 'Fjalla One', sans-serif;
+}
+.header{
+  background-color: #FFFFFF;/*#1b2127;*/
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 70px; /* <---- solo agregamos esta linea */
+  flex-wrap: wrap;
+  
+}
+.header a{
+    color:#8AB2D4;
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+    
+  align-items: center;
+  padding: 0 10px; /* <---- solo agregamos esta linea */
+}
+.footer{
+    color: white;
+    background-color: #1b2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: wrap ;
+}
+
+.footer img{
+  vertical-align: middle;
+}
+.footer a{
+  color:white;
+}
+
+.event{
+  margin: 1%;
+  width: 48%;
+  border-radius: 10px;
+  flex-shrink: 0;
+  overflow: hidden;/*sirve para ocultar el desbordamiento de los elementetos dentro de algun contenedor;*/
+  background-color: #f4fbff;
+}
+.event-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.event img{
+  width: 480px;
+  height: 200px;
+  object-fit:cover;
+}
+.event-detail{
+  margin: 20px 40px;
+  background-color: white;
+  margin-top: -40px;
+  padding: 20px;
+  position: relative;/* nos permite poner elementos sobre otros*/
+  text-align: center;
+}
+.event-description{
+  text-align: center;
+}
+.event-url{
+  color:#056fff;
+  border: 1px solid;
+  padding: 5px 20px;/*top-botom left-right*/
+  text-decoration: none;
+  border-radius: 5px;
+}
+.event-list-title{
+  margin-left: 20px;
+}
+.contact{
+  background-color: #ffffff;
+  color: #8AB2D4;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+
+.social-link{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+}
+
+.social-link.twitter{
+  background-image: url('../images/twitter.svg');
+  background-size: 50px 50px;
+}
+
+.social-link.facebook{
+  background-image: url('../images/facebook.svg');
+  background-size: 50px 50px;
+}
+
+.social-link.github{
+  background-image: url('../images/github.svg');
+  background-size: 50px 50px;
+}
+.social-link.linkln{
+  background-image: url('../images/linkedin.svg');
+  background-size: 50px 50px;
+}
+.form-email input{
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url('../images/email.svg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center ;
+  background-position-x: 5px;
+}
+.form-email button{
+  display: block;
+  margin-top: 10px;
+  background-color: transparent;
+  color: white;
+  padding: 10px 0;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.form-email h3 {
+  font-family: 'Source Sans Pro', sans-serif ;
+}
+
+.container{
+  max-width: 1000px;
+  flex: 1;/*coja todo lo que haya disponible*/
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+  
+}
+
+.burger-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0, .8);
+  display: none;/*display block me permite ajustar el 
+  height y el witdh, si el elemento es inline no me permite ajstar su tamaño.
+*/
+  line-height: 40px;/*debe ser igual al height 
+  del elemento para que centre bien*/
+  text-align: center;
+  position: fixed;
+  z-index: 8;
+  left: 5px;
+  top: 5px;
+  color: white;
+}
+
+/*desktop first : se empieza desde el media query mas grande*/
+@media screen and (max-width: 1024px){
+  .container{
+    padding: 0 1em;;
+  }
+  .hero{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+  .hero-image{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+
+  }
+  h1{
+    font-size: 2em;
+    z-index: 2;
+  }
+}
+.html-video {
+  width: 100%;
+  height: auto;
+  /* max-width: 100%; */
+}
+
+.youtube-video {
+  /* width: 100%; */
+  /* height: auto; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flexible-video {
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  background: blue;
+  position: relative;
+}
+@media screen and (max-width:767px){
+ 
+  .burger-button{
+    display: block;
+  }
+  .header{
+    display: block;
+    height: auto;
+  }
+  .header ul {
+    display: initial; /*colocar el valor por defecto que haya tenido elemento(block)*/
+  }
+  .header ul li {
+    height: 50px; /*colocar el valor por defecto que haya tenido elemento(block)*/
+  }
+  .header a{
+    justify-content: center;
+  }
+  .header .logo{
+    text-align: center;
+  }
+  .project{
+    display: block;
+  }
+  .project-imageContainer{
+    width: auto;
+    text-align: center;
+    
+  }
+  .project-details{
+    width: auto;
+    font-size: 16px;
+  }
+  .project-course, .project-date, .project-url{
+    margin: .3em 0;
+
+  }
+  .project-title{
+    font-size: 1.5em;
+    margin-bottom: .3em;
+  }
+  .project-url{
+    font-size: 1em;
+  }
+  .project-course{
+    font-size: .7em;
+  }
+  .project-date{
+    font-size: 1em;
+
+  }
+  .project-description{
+    font-size: .8em;
+  }
+  .event{
+    width: 94%;
+    flex-shrink: initial;
+    margin: 2em 2em 0 2em;
+  }
+
+  .event img{
+    width: 100%;
+    object-fit: contain;
+
+  }
+  .event-detail{
+    margin: -2em .5em .5em ;
+    padding: 1em
+  }
+  
+  
+  .contact{
+    height: auto;
+    padding: 1em 0;
+    display: block;
+    text-align: center;
+  }
+ .form-email button{
+    margin: 1em auto;
+  }
+  .form-email h3{
+    margin-top: 0;
+  }
+  .footer{
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+  .menu {
+    position: fixed;
+    background: rgba(5, 111, 255, .9);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    /* height: 100vh; */
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+  .menu.is-active {
+    left: 0;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  h1 {
+    font-size: 1.5em;
+  }
+  .project-details {
+    font-size: 14px;
+  }
+
+  .event-detail {
+    /* 1em = 16px */
+    margin: -2em .5em .5em;
+    padding: 1em;
+  }
+
+  .contact {
+    height: auto;
+    padding: 1.5em 0;
+    text-align: center;
+    display: block;
+  }
+  .form-email button {
+    margin: 1em auto;
+  }
+  .form-email h3 {
+    margin-top: 0;
+  }
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+  .social-link {
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+  }
+  .social-link.twitter{
+    background-size: 40px;
+  }
+  
+  .social-link.facebook{
+    background-size: 40px;
+  }
+  
+  .social-link.github{
+    background-size:40px;
+  }
+  .social-link.linkln{
+    background-size: 40px;
+  }
+}
+
+
+@media screen and (max-width: 320px){
+  h1 {
+    font-size: 1.2em;
+    /* background: rgba(0,0,0,.5) */
+  }
+  .hero {
+    padding: 2em 1em;
+  }
+}
+@media screen and (max-width: 375px){
+  .project-imageContainer img {
+    height: auto;
+}
+}
+

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--especeificamos el idioma de nuestra pagina lang="es"-->
+<html lang="es">
+<head><!--nos da informacion sobre nuestra pagina-->
+    <!--meta charset="UTF-8" me sive para especificar el conjunto de caracteres 
+    que voy a estar utilizando UTF8 incluye las Ñ y las tildes que son 
+    los que utilizamos en nuestro idioma-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eduardo Ramos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!--link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)"--/>
+    <!--nos permite colocar un icono en al lado de title en el navegadot-->
+    <link rel="icon" type="image/jpg" href="images/perfil.jpg"/>
+</head>
+<body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
+    <header class="header"><!--cabecera de nuestra documento-->
+        <div class="container">    
+            <figure class="logo">
+                <!--en el src puedo manejar 2 tipos de rutas, rutas absolutas: https//plati.com/imagen/img.ong
+                rutas relativas: images/perfil.jpg. son locales si utilizo ../ hago referencia a una carpeta
+                fuera de mi espacio de trabajo-->
+                <img src="" alt="" height="50">
+            </figure>
+            <nav class="menu"><!--se usa para menus de navegacion-->
+                <ul><!--listas ordenadas-->
+                    <li><!--item de las lista-->
+                        <!--href="#" me direcciona a la pagina en donde estoy-->
+                        <!--"anchor ,enlaces,anclas nos lleva a una pagina interna o externa"-->
+                        <a class="link" href="#portafolio">Portafolio</a><!--href con navegacion interna,la ruta apunta al id de la seccion con id="portafolio"-->
+                    </li>
+                    <li><!--item de las lista-->
+                        <!--"anchor ,enlaces,anclas nos lleva a una pagina interna o externa"-->
+                        <a class="link" href="#eventos">Videos</a>
+                    </li>
+                    <li><!--item de las lista-->
+                        <!--"anchor ,enlaces,anclas nos lleva a una pagina interna o externa"-->
+                        <a class="link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>Hi ! I am <strong>Eduardo Ramos </strong> <br>Full-stack  <br><strong>Software Developer</strong> <br>with passion for <strong>technology </strong></h1>
+            <img class="hero-image" src="images/hero.jpg" alt="imagen principal del sitio" width="500" height="300">
+        </div>
+      </section>
+    <section id="portafolio" class="portfolio">
+        <div class="container">
+            <h2>Proyects</h2>
+            <article class="project">
+                <div class="project-details">
+                    <h3 class="project-title">X-math</h3>
+                    <h6 class="project-course">Mysql-Html-Css-Js</h6>
+                    <p class="project-date"><small><strong>Fecha:</strong>Current 2020</small></p>
+                    <p class="project-url"><small><strong>Puedes verlo en:
+                    </strong>Comming Soon</small></p>
+                    <p class="project-description">Web application that in a playful way helps 
+                        children learn the multiplication tables.
+                    </p>
+                </div>
+                <figure class="project-imageContainer">
+                    <img src="images/xmath.png" width="500" height="300">
+                </figure>   
+                </article>
+                <article class="project">
+                <div class="project-details">
+                    <h3 class="project-title">School Manager Platform</h3>
+                    <h6 class="project-course">ReactJS-Django-Heroku.</h6>
+                    <p class="project-date"><small><strong>Fecha:</strong>01/07/2020</small></p>
+                    <p class="project-url"><small><strong>Puedes verlo en:</strong>
+                        <a href="https://github.com/untalsebastianb/bomberbot_project">https://github.com/bomberbot_project</a></p>
+                    </small></p>
+                    <p class="project-description">Development of a teacher manager platform MVP for the company Bomberbot
+                    </div> 
+                <figure class="project-imageContainer">
+                    <img src="images/cap.PNG" width="500" height="300">
+                </figure>   
+            </article>
+        </div>
+        <div class="container">
+
+            <article class="project">
+                <div class="project-details">
+                    <h3 class="project-title">PrintF</h3>
+                    <h6 class="project-course">C programming language</h6>
+                    <p class="project-date"><small><strong>Fecha:</strong>01/07/2020</small></p>
+                    <p class="project-url"><small><strong>Puedes verlo en:
+                    </strong><a href="https://github.com/earamosb8/printf">https://github.com/earamosb8/printf</a></small></p>
+                    <p class="project-description">Replica of PrintF function of C programming language.
+                            </p>
+                </div>
+                <figure class="project-imageContainer">
+                    <img src="images/hlber.png" width="500" height="300">
+                </figure>   
+                </article>
+                <article class="project">
+                <div class="project-details">
+                    <h3 class="project-title">Airbnb Clone Web Application</h3>
+                    <h6 class="project-course">Python, Flask, MySQL,
+                        JavaScript, CSS</h6>
+                    <p class="project-date"><small><strong>Fecha:</strong>01/07/2020</small></p>
+                    <p class="project-url"><small><strong>Puedes verlo en:</strong>
+                        <a href="https://github.com/earamosb8/AirBnB_clone_v4">https://github.com/AirBnB_clone_v4</a></p>
+                    </small></p>
+                    <p class="project-description">Created a replica of the website AirBnB
+                        (command interpreter, website, database and
+                        API, deploy on AWS).</p>
+                    </div> 
+                <figure class="project-imageContainer">
+                    <img src="images/pro.jpg" width="500" height="300">
+                </figure>   
+            </article>
+        </div>
+    </section> 
+    <div class="container">
+        <h2 class="event-list-title">More about me</h2>
+      </div>
+        <section id="eventos" class="event-list">
+            <div class="container"> 
+                <article class="event">
+                    <figure class="event-imageContainer">
+                        <div class="flexible-video">
+                            <iframe  class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/ZW9R2Ltl1bE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </figure>
+                    <div class="event-detail">
+                        <h3 class="event-title">Bomberbot</h3>
+                        <p class="event-description">Video About Bomberbot</p>
+                        <a class="event-url" href="https://www.youtube.com/embed/ZW9R2Ltl1bE" target="_blank">Ver Video</a>
+                    </div> 
+                </article>
+                <article class="event">
+                   
+                    <figure class="event-imageContainer">
+                        <div class="flexible-video">
+                            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/FacTfh4PYOU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          </div>
+                    </figure>
+                    <div class="event-detail">
+                        <h3 class="event-title">Tutorial Html-css</h3>
+                       <p class="event-description">Made by me</p>
+                        <a class="event-url" href="https://youtu.be/FacTfh4PYOU" target="_blank">Ver Video</a>
+                    </div>       
+                </article>
+            </div>
+        </section>
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h3>You can find me in:</h3>
+            <div class="social">
+                <a href="https://twitter.com/eduar880620" class="social-link twitter"></a>
+                <a href="https://www.facebook.com/xAcerox/" class="social-link facebook"></a>
+                <a href="https://github.com/earamosb8" class="social-link github"></a>
+                <a href="https://www.linkedin.com/in/earamosb8/" class="social-link linkln"></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+       
+    </footer>
+    <script>
+        // console.log('Hola mundo! es mi primera linea en JS');
+        const ipad = window.matchMedia('screen and (max-width: 767px)')
+        const menu = document.querySelector('.menu');//con esto traigo toda la etiqueta que tiene la clase menu
+        // console.log(menu);
+        const burgerButton = document.querySelector('#burger-menu');
+        // console.log(burgerButton);
+        ipad.addListener(validation)
+        /*los listener consumen espacio de memoria entonces hay que quitarlos cuando no se necesiten */
+        function validation(event) {
+          if (event.matches) {
+            burgerButton.addEventListener('click', hideShow)
+          } else {
+            burgerButton.removeEventListener('click', hideShow)
+          }
+        }
+        validation(ipad);
+  
+  
+        function hideShow() {
+          if (menu.classList.contains('is-active')) {
+            menu.classList.remove('is-active');
+          } else {
+            menu.classList.add('is-active');
+          }
+        }
+      </script>
+</body>
+</html>
