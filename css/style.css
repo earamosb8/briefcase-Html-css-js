@@ -10,10 +10,17 @@ body header div nav ol li a{
 
 /* selector de clase . puedes aplicar un clase a muchas etiquetas html,pero si vas aplicar un id debe ser unico para un solo elemento html*/
 /*selectores de id # deben ser unicos para un solo elemento html*/
+
+:root{
+  --gris: #dddddd;
+  --bluedark: #222831;
+  --bluemarine: #30475e;
+  --tomato:#f05454;
+}
 body{
    font-family: 'Source Sans Pro', sans-serif;
    margin:0;
-   background-color: #BAE4FA;
+   background-color: var(--gris);
 }
 
 @font-face {
@@ -85,18 +92,18 @@ h1{
      /*top right bottom left*/
 }
 h1 strong{
-    color: #026fff;
+    color: var(--tomato);
 
 }
 h2{
-  color: white;
+  color: var(--gris);
   text-transform: uppercase;
   text-align: center;
   font-family:  'Source Sans Pro', sans-serif;
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 40px;
-  background-color:#251F46;
+  background-color:var(--bluedark);
 }
 .hero{
     height: 300px;
@@ -104,7 +111,7 @@ h2{
     /*background-size: 500px 300px;
     background-repeat: no-repeat;
     background-position-x: right;*/
-    background-color:#251F46/*#1b2127;*/;
+    background-color:var(--bluedark);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -114,7 +121,7 @@ h2{
   object-fit: cover;
 }
 .portfolio{
-    background-color:/* #fafafa;*/#085DB0;
+    background-color:var(--gris);
     padding: 20px;
 }
 .project{
@@ -146,6 +153,7 @@ h2{
   font-size: 30px;
   margin-top: 0;
   margin-bottom: 10px;
+  color:var(--bluemarine);
 
 }
 .project-details{
@@ -155,10 +163,16 @@ h2{
 
 .project-imageContainer{
     width: 50%;
-    border: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 0px;
+    border-right: 0px;
+    
+    object-fit: contain;
     box-sizing: border-box;
-    border-radius: 10px;
+    
     overflow: hidden;
+    height: auto;
 }
 
 .project-imageContainer img {
@@ -168,18 +182,21 @@ h2{
 }
 .project-course{
   margin: 10px 0;
+  color:var(--bluedark);
 }
 .project-date, .project-url{
   margin: 10px 0;
+  color:var(--bluedark);
 }
 .project-description{
   font-size: 20px;
+  color:var(--bluedark);
 }
 .project strong{
   font-family: 'Fjalla One', sans-serif;
 }
 .header{
-  background-color: #FFFFFF;/*#1b2127;*/
+  background-color:var(--bluedark);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -188,7 +205,7 @@ h2{
   
 }
 .header a{
-    color:#8AB2D4;
+    color:var(--gris);
     text-decoration: none;
     height: inherit;
     display: flex;
@@ -251,8 +268,8 @@ h2{
   margin-left: 20px;
 }
 .contact{
-  background-color: #ffffff;
-  color: #8AB2D4;
+  background-color: var(--bluedark);
+  color: var(--tomato);
   height: 150px;
   display: flex;
   align-items: center;
@@ -367,6 +384,7 @@ h2{
   h1{
     font-size: 2em;
     z-index: 2;
+    color:var(--bluedark);
   }
 }
 .html-video {
@@ -484,7 +502,7 @@ h2{
   }
   .menu {
     position: fixed;
-    background: rgba(5, 111, 255, .9);
+    background: rgba(48, 71, 94, .9);
     z-index: 3;
     top: 0;
     left: -100vw;
